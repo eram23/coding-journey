@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+}
+
+p {
+    font-size: 1.125em;
+    line-height: 1.5;
+}
+
+button:hover, button:active {
+    cursor: pointer;
+    outline: none;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+/* NAVBAR SECTION */
+.navbar {
+    width: 100%;
+    padding: 1em 1.25em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-width: 140px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: .75em;
+    font-weight: 500;
+}
+
+.nav-list li:last-child {
+    margin-left: 1em;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* HERO SECTION */
+.hero {
+    background-image: url(/images/blog-image-hero.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 10em 1.25em 2em;
+}
+
+h1 {
+    font-size: 8vw;
+}
+
+.hero span {
+    font-size: 1em;
+}
+
+.hero p {
+    max-width: 900px;
+}
+
+/* BLOG SECTION */
+.blog-grid {
+    margin: 2em auto 2em;
+    padding: 0 1em;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 1.25em;
+}
+
+.blog-item > * {
+    margin-bottom: .5rem;
+}
+
+.img-container {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.blog-img {
+    width: 100%;
+    height: 100%;
+}
+
+.img-container img {
+    object-fit: cover;
+
+}
+
+.see-more-btn {
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
+    font-weight: 700;
+    display: flex;
+    margin: 0 auto 2em;
+    text-align: center;
+
+}
+
+/* ABOUT ME PAGE */
+
+.about-me-section {
+    padding: 2em 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me-section img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+}
+
+.about-me-section > * {
+    margin-bottom: 1rem;
+}
+
+.subheader {
+    font-weight: 600;
+}
+
+.recent-posts {
+    text-align: center;
+}
+
+@media (max-width: 780px) {
+    .blog-four {
+        display: none;
+    }
+
+    .blog-five {
+        display: none;
+    }
+
+}
+
+
+@media (min-width: 780px) {
+    .hero {
+        padding: 15em 1.25em 4em;
+    }
+    
+    h1 {
+        font-size: 5vw;
+    }
+
+    .blog-grid {
+        grid-template-columns: repeat(3, minmax(240px, auto));
+        gap: 1.25em;
+        grid-auto-flow: dense;
+    }
+
+    .about-me-intro {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .about-me-intro img {
+        width: 25%;
+        height: 25%;
+        margin-right: 2em;
+        margin-bottom: 2em;
+    }
+
+    .about-me-intro h1 {
+        font-size: 3vw;
+    }
+}
